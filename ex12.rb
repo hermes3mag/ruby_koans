@@ -1,5 +1,5 @@
 require 'open-uri'
-
+# commenting for git diff
 open("http://www.ruby-lang.org/en") do |f|
   f.each_line {|line| p line}
   puts f.base_uri
