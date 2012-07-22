@@ -15,6 +15,10 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  # raise TriangleError,"Sides must be greater than zero" if [a,b,c].uniq.include?(0)
+   raise TriangleError,"Sides must be greater than zero" if (a<=0)||(b<=0)||(c<=0)
+   raise TriangleError, "No two sides can add to be less than or equal to the other side" if (a+b <= c) || (a+c <= b) || (b+c <= a)
+
   case [a,b,c].uniq.length
    when 1 then :equilateral
    when 2 then :isosceles
